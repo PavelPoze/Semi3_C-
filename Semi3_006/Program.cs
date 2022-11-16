@@ -9,7 +9,7 @@ int lastDigit = randomNumber % 10;                  // нахождение пе
 int firstDigit = randomNumber / 100;              // нахождение второго числа     
 Console.WriteLine(randomNumber);
 
-Console.Write(firstDigit);    //Console.WriteLine(firstDigit + "" + lastDigit);
-Console.WriteLine(lastDigit);
-
+/*Console.Write(firstDigit);    //Console.WriteLine(firstDigit + "" + lastDigit);
+Console.WriteLine(lastDigit);*/
+Console.WriteLine($"{firstDigit}{lastDigit}");     // способ склеивания с интерполяцией вывод в одну строку
 
