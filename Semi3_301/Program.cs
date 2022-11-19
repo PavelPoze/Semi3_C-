@@ -43,7 +43,7 @@ int ReadInt(string message)
 //Вторая задача
 /*Напишите программу, которая по заданному номеру четверти,
  показывает диапазон возможных координат точек в этой четверти (x и y).*/
-
+/*
 int quarter = ReadInt("Введите четверть: ");
 
 if (quarter == 1)
@@ -62,8 +62,90 @@ if (quarter == 1)
  {
     Console.WriteLine(" x > 0 , y < 0");
  }
+ else 
+ {
+    Console.WriteLine("НЕ верное значение всего 4");
+ }
+
+ switch (quarter)      // этой функцией можно заменить занчения (if)
+                       // кейс  работает быстрее проверяет сразу на заданную цифру
+ {
+    case 1:
+        Console.WriteLine(" x > 0 , y >0");
+        break;
+    case 2:
+        Console.WriteLine(" x < 0 , y >0");
+        break;
+    case 3:
+        Console.WriteLine(" x < 0 , y <0");
+        break;
+    case 4:
+        Console.WriteLine(" x > 0 , y < 0");
+        break;
+    default:        // пишется только если нужно делать еще действие следующее действие
+        Console.WriteLine(" Всего 4!");
+        break;            
+ }
+
+
+int ReadInt(string message)
+{
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+}*/
+ //работает 
+
+ //Третья задача
+  /*Напишите программу, которая принимает на вход координаты двух точек 
+  и находит расстояние между ними в 2D пространстве.
+
+A (3,6); B (2,1) -> 5,09 
+A (7,-5); B (1,-1) -> 7,21
+*/
+/*
+int x1 = ReadInt("Введите координаты Х1: ");
+int y1 = ReadInt("Введите координаты B1: ");
+
+int x2 = ReadInt("Введите координаты Х2: ");
+int y2 = ReadInt("Введите координаты B2: ");
+
+int a = x2 - x1;
+int b = y2 - y1;
+
+double result = Math.Sqrt(a*a+b*b);
+
+Console.WriteLine($"Расстояние равно = {result}");
+
 int ReadInt(string message)
 {
     Console.Write(message);
     return Convert.ToInt32(Console.ReadLine());
 }
+*/
+//работает расстояние найдено
+
+/*
+Напишите программу, которая принимает на вход число (N) и выдаёт таблицу квадратов чисел 
+от 1 до N.
+
+5 -> 1, 4, 9, 16, 25.
+2 -> 1,4
+*/
+/*
+int number = ReadInt("Введите число: ");
+ int count = 1;
+
+ while (count <= number)
+ {
+    Console.Write($"{count*count} ");
+    count ++;
+ }
+ Console.WriteLine();
+
+ int ReadInt(string message)
+ {
+    Console.Write(message);
+    return Convert.ToInt32(Console.ReadLine());
+ }
+*/
+ //работает 
