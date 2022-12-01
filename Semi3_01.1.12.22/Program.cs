@@ -80,15 +80,12 @@ string binary = "";
 
 while (temp != 0)
 {
-    binary += Convert.ToString(temp%2);
+    binary = temp%2 + binary;
     temp /= 2; 
 }
-string result = "";
-for (int i = binary.Length-1; i >= 0; i--)
-{
-    result += binary[i];
-}
-Console.WriteLine($"Десятичное число {number} = {result} в двоичной сисеме.");
+
+Console.WriteLine($"Десятичное число {number} = {binary} в двоичной сисеме.");
+
 //Console.WriteLine(binary);
 int ReadInt(string message)                                  // ввод числа
 {
